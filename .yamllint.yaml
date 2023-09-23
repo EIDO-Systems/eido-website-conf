@@ -1,0 +1,40 @@
+---
+rules:
+  extends: "default"
+
+  # Require quoted strings
+  quoted-strings:
+    quote-type: "double"
+    required: true
+
+  # Use 2 spaces for indentation
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: true
+
+  # Forbid anchors
+  anchors:
+    forbid-undeclared-aliases: true
+    forbid-duplicated-anchors: true
+
+  # Require all documents to begin with '---'
+  document-start:
+    present: true
+
+  # Tidy the document of blank lines
+  empty-lines:
+    max: 1
+
+  # Tidy brackets
+  brackets:
+    forbid: false
+    min-spaces-inside: 1
+    max-spaces-inside: 1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+
+  # Do not allow "yes"/"no"/"on"/"off" for boolean values
+  truthy:
+    allowed-values: ["true", "false"]
+    check-keys: true
